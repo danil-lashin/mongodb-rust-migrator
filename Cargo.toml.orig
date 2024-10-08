@@ -1,0 +1,36 @@
+[package]
+name = "mongodb-migrator"
+version = "0.1.8"
+authors = ["Konstantin Matsiushonak <k.matushonok@gmail.com"]
+edition = "2021"
+description = "MongoDB migrations management tool"
+readme = "README.md"
+repository = "https://github.com/kakoc/mongodb_migrator"
+license = "MIT OR Apache-2.0"
+categories = ["database"]
+keywords = ["mongodb"]
+
+[dependencies]
+async-trait = "0.1.42"
+chrono = { version = "0.4.19", features = ["serde"] }
+mongodb = "2.2.2"
+bson = "2.3.0"
+anyhow = "1.0.34"
+serde = "1.0.117"
+serde_derive = "1.0.117"
+serde_json = "1.0.82"
+log = "0.4.11"
+thiserror = "1.0.31"
+futures = "0.3.8"
+
+# TODO(kakoc): place under features?
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+axum = "0.6.1"
+tokio = { version = "1.17.0", features = ["full"] }
+
+[dev-dependencies]
+testcontainers = "0.11.0"
+rusty-hook = "^0.11.2"
+version-sync = "0.9"
+hyper = { version = "0.14.23", features = ["client"] }
